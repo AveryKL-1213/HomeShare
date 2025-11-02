@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HomeShare</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>HomeShare</h1>
+      <div id="serverInfo" class="muted"></div>
+      <div class="header-controls">
+        <button id="languageToggle" class="ghost-btn small" type="button" aria-label="Switch language">
+          EN
+        </button>
+        <button id="themeToggle" class="ghost-btn small" type="button" aria-label="Toggle theme">Theme</button>
+      </div>
+    </header>
+    <main>
+      <section class="toolbar">
+        <nav id="breadcrumbs" class="breadcrumbs"></nav>
+        <div class="toolbar-actions">
+          <button id="refreshBtn">Refresh</button>
+          <button id="zipBtn" disabled>Download ZIP</button>
+          <label id="uploadLabel" class="file-upload hidden">
+            <span id="uploadLabelText">Upload Files</span>
+            <input type="file" id="fileInput" multiple />
+          </label>
+          <button id="mkdirBtn" class="hidden">New Folder</button>
+        </div>
+      </section>
+      <section id="messages" class="messages"></section>
+      <section class="table-wrapper">
+        <table id="fileTable">
+          <thead>
+            <tr>
+              <th class="select-col"><input type="checkbox" id="selectAll" /></th>
+              <th id="thName">Name</th>
+              <th id="thSize" class="size-col">Size</th>
+              <th id="thDate" class="date-col">Modified</th>
+              <th id="thOps" class="ops-col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="fileTableBody"></tbody>
+        </table>
+      </section>
+      <section id="uploadStatus" class="uploads"></section>
+    </main>
+    <div id="previewOverlay" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <header class="modal-header">
+          <h2 id="previewTitle">Preview</h2>
+          <button id="previewClose" class="ghost-btn">Close</button>
+        </header>
+        <div id="previewBody" class="modal-body"></div>
+      </div>
+    </div>
+    <script src="/static/app.js" type="module"></script>
+  </body>
+</html>

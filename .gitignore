@@ -1,0 +1,27 @@
+# Bytecode caches
+__pycache__/
+*.py[cod]
+
+# Local state and uploads
+.homeshare_state/
+uploads/
+
+# OS clutter
+.DS_Store
+Thumbs.db
+
+# Archives and generated bundles
+*.zip
+*.tar
+*.gz
+
+# Editor / IDE artifacts
+.vscode/
+.idea/
+.history/
+
+# Logs and debug output
+*.log
+.pytest_cache/
+dist/
+build/
